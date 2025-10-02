@@ -13,6 +13,12 @@
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
+		// Retrieve a secret from Cloudflare Secrets Store.
+		const slackIncomingWebhookUrl = env.SENTRY_SLACK_INCOMING_WEBHOOK_URL;
+		if (slackIncomingWebhookUrl.length === 0) {
+			return new Response('Slack incoming webhook URL is not set.', { status: 500 });
+		}
+
 		return new Response('Hello World!');
 	},
 } satisfies ExportedHandler<Env>;

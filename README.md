@@ -8,9 +8,14 @@ This was created because, although Sentry _has_ a Slack integration, it requires
 
 ### Quick start
 
+Here's how you can start a local development server:
+
 ```shell
 npm install
+npx wrangler dev
 ```
+
+> You can press `q` to shut down the local development server.
 
 We use [Wrangler](https://developers.cloudflare.com/workers/wrangler) to handle deployment to Cloudflare Workers. You can run it via: `$ npx wrangler`.
 
