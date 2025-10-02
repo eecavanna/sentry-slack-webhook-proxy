@@ -11,6 +11,7 @@ This was created because, although Sentry _has_ a Slack integration, it requires
 Here's how you can start a local development server:
 
 ```shell
+cp .env.example .env
 npm install
 npx wrangler dev
 ```
@@ -32,3 +33,11 @@ npm run test
 ```
 
 We are considering using [Miniflare](https://developers.cloudflare.com/workers/testing/miniflare/) to simulate the Cloudflare Workers environment locally.
+
+## Deployment
+
+You can deploy the API as a Cloudflare Worker by running:
+
+```shell
+npx run deploy
+```
