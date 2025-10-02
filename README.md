@@ -17,7 +17,11 @@ npx wrangler dev
 
 > You can press `q` to shut down the local development server.
 
+### Details
+
 We use [Wrangler](https://developers.cloudflare.com/workers/wrangler) to handle deployment to Cloudflare Workers. You can run it via: `$ npx wrangler`.
+
+We stored the Slack incoming webhook URL as a worker-level secret on Cloudflare, by running: `$ npx wrangler secret put SENTRY_SLACK_INCOMING_WEBHOOK_URL` (and entering the URL when prompted)
 
 ## Testing
 
